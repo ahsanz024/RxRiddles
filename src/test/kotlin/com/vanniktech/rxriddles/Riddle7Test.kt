@@ -7,8 +7,8 @@ import org.junit.Test
 /** Solution [Riddle7Solution] */
 class Riddle7Test {
   @Test fun solve() {
-    Riddle7.solve(Observable.just(1, 2, 3, 1, 2, 4, 4, 5, 4))
+    Riddle7.solve(Observable.just(0, 1, 2, 3, 1, 2, 4, 4, 5, 4))
         .test()
-        .assertResult(1, 2, 3, 4, 5)
+        .assertResult(0, 1, 2, 3, 4, 5)
   }
 }

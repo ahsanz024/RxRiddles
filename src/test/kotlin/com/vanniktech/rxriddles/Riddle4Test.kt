@@ -13,6 +13,7 @@ class Riddle4Test {
         .test()
         .assertValuesOnly(false)
 
+
     subject.onNext(Unit)
     o.assertValuesOnly(false, true)
 
