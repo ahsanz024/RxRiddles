@@ -12,7 +12,6 @@ object Riddle19 {
   fun solve(interaction: Interaction): Observable<Int> {
     TODO()
   }
-
   interface Interaction {
     var listener: ((Int) -> Unit)?
   }

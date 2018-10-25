@@ -1,6 +1,7 @@
 package com.vanniktech.rxriddles
 
 import io.reactivex.Observable
+import java.io.IOException
 
 object Riddle37 {
   /**
@@ -9,6 +10,9 @@ object Riddle37 {
    * Use case: You want to recover from an expected error and map them to a particular result.
    */
   fun solve(source: Observable<Boolean>): Observable<Boolean> {
-    TODO()
+    return source.onErrorResumeNext { t: Throwable ->
+      if (t is IOException) Observable.just(false)
+      null
+    }
   }
 }
